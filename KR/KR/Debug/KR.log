@@ -1,0 +1,10 @@
+﻿  MemberField.cpp
+c:\users\egor\documents\visual studio 2013\projects\kr\kr\memberfield.cpp(15): error C2440: =: невозможно преобразовать "initializer-list" в "char"
+          Только список инициализаторов с нулем или одним элементом может быть преобразован в этот тип
+c:\users\egor\documents\visual studio 2013\projects\kr\kr\memberfield.cpp(26): warning C4018: <: несоответствие типов со знаком и без знака
+  Member.cpp
+  KR.cpp
+c:\users\egor\documents\visual studio 2013\projects\kr\kr\kr.cpp(27): warning C4101: IllegalArgumentException: неиспользованная локальная переменная
+  DataBase.cpp
+c:\users\egor\documents\visual studio 2013\projects\kr\kr\database.cpp(9): warning C4018: >: несоответствие типов со знаком и без знака
+  Создание кода...
