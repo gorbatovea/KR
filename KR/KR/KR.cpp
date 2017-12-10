@@ -7,29 +7,44 @@
 
 using namespace std;
 
-void printlnDataBase(DataBase instance, char splitter){
-	for (int i = 0; i < instance.size(); i++){
-		cout << (string)instance.get(i).getFirstName().getField();//<< splitter << (string)instance.get(i).getSecondName().getField() << endl;
-	}
-}
+int _tmain(int argc, _TCHAR* argv[]){
 
-int _tmain(int argc, _TCHAR* argv[])
-{
-	string name = "abc", soName = "abc";
+	ifstream fin("input.txt", ifstream::in);
+	ofstream fout("output.txt", ofstream::out);
+
 	try{
-		DataBase base;
-		MemberField m1((string)"egor");
-		MemberField m2((string)"gorbatov");
-		Member m(m1, m2);
-		base.add(m);
-		printlnDataBase(base, ' ');
+		string str1, str2;
+		char buf[1];
+		while (fin.good()){
+			fin.read(buf, 1);
+			if (buf[0] == ' ') break;
+			else str1.push_back(buf[0]);
+		}
+		while (fin.good()){
+			fin.read(buf, 1);
+			if (buf[0] == ' ') break;
+			else str2.push_back(buf[0]);
+		}
+
+
+		DataBase* base = new DataBase();
+		base->add(Member(string("egor"), string("gorbatov")));
+		Member newMember{ string("name"), string("soname") };
+		base->add(newMember);
+		base->add(Member(str1, str2));
+		println(*base, ' ');
+		for (int i = 0; i < base->size(); i++){
+			fout << base->get(i).hash() << endl;
+		}
 	}
 	catch (MemberField::exceptions IllegalArgumentException){
 		printf("IllegalArgumentException\n");
-		_getch();
+		getchar();
 		return 1;
 	}
-	_getch();
+	fin.close();
+	fout.close();
+	getchar();
 	return 0;
 }
 

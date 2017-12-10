@@ -7,7 +7,7 @@ using namespace std;
 
 class MemberField: public AbstractNumerical{
 private:
-	char* PATTERN;
+	char PATTERN[2];
 	static const int DIGIT_COUNT;
 	static const int MIN_DIGIT_VALUE;
 	string data = " ";

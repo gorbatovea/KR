@@ -24,10 +24,12 @@ void DataBase::merge(DataBase instance){
 	}
 };
 
-
-void sort(DataBase& dataBase){
-	return;
+void println(DataBase& dataBase, const char splitter){
+	for (int i = 0; i < dataBase.list->size(); i++){
+		cout << (string)dataBase.list->at(i).getFirstName().getField() << splitter << (string)dataBase.list->at(i).getSecondName().getField() << endl;
+	}
 };
+
 DataBase::~DataBase(){
 	delete[](this->list);
 };

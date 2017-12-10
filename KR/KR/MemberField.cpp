@@ -12,7 +12,8 @@ MemberField::MemberField(){
 };
 
 MemberField::MemberField(string inputData){
-	PATTERN[2] = { 'a', 'z' };
+	PATTERN[0] = 'a';
+	PATTERN[1] = 'z';
 	if (inputData.length() == 0) {
 		throw (IllegalArgumentException);
 	}
@@ -58,4 +59,5 @@ MemberField MemberField::operator= (MemberField& instance){
 };
 
 MemberField::~MemberField(){
+	this->data.clear();
 };

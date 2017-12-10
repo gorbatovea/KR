@@ -83,6 +83,7 @@
     <ClInclude Include="AbstractMember.h" />
     <ClInclude Include="AbstractNumerical.h" />
     <ClInclude Include="DataBase.h" />
+    <ClInclude Include="AbstractHashable.h" />
     <ClInclude Include="Member.h" />
     <ClInclude Include="MemberField.h" />
     <ClInclude Include="stdafx.h" />

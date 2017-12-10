@@ -3,10 +3,11 @@
 
 #include "MemberField.h"
 #include "AbstractMember.h"
+#include "AbstractHashable.h"
 
 using namespace std;
 
-class Member: public AbstractMember<MemberField>{
+class Member : public AbstractMember<MemberField>, public AbstractHashable{
 private:
 	MemberField firstName;
 	MemberField secondName;
@@ -15,6 +16,7 @@ public:
 //	Member(string first, string second);
 	MemberField getFirstName();
 	MemberField getSecondName();
+	virtual long long hash();
 	~Member();
 };
 

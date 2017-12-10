@@ -19,7 +19,7 @@ public:
 	void add(Member element);
 	void merge(DataBase instance);
 	int size();
-	friend void sort(DataBase& dataBase);
+	friend void println(DataBase& dataBase, const char splitter);
 	~DataBase();
 };
 

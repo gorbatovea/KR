@@ -13,6 +13,7 @@
 #include <vector>
 #include <conio.h>
 #include <iostream>
+#include <fstream>
 
 
 // TODO: Установите здесь ссылки на дополнительные заголовки, требующиеся для программы
